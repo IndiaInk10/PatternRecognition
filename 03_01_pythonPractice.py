@@ -92,8 +92,8 @@ print('sum = ', sum)
 # module == header, library(c)
 # import, import ~ as
 # from ~ import, from ~ import ~ as / not recommended
-import header_area as mod  # header_area.py를 module로 import
-from header_area import write  # header_area.py내의 write function만 import
+import header_area_03_01 as mod  # header_area.py를 module로 import
+from header_area_03_01 import write  # header_area.py내의 write function만 import
 
 
 mod.say()
