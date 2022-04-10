@@ -12,7 +12,8 @@ X = 500
 Y = 700
 
 # image2 = cv2.resize(image, (image.shape[1]*2,image.shape[0]*2), interpolation= cv2.INTER_LINEAR)
-image2 = cv2.resize(image, (X, Y), interpolation= cv2.INTER_LINEAR)
+# image2 = cv2.resize(image, (X, Y), interpolation= cv2.INTER_LINEAR)
+image2 = cv2.resize(image, (X, Y), interpolation= cv2.INTER_NEAREST)
 # image3 = np.zeros((image.shape[0]*2,image.shape[1]*2, 3), image.dtype)
 image3 = np.zeros((Y, X, 3), image.dtype)
 
