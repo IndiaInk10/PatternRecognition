@@ -1,6 +1,6 @@
 # 사각형 그리기
 import numpy as np, cv2
-import resources.draw_histogram as dh
+import draw_histogram as dh
 
 # 사각형 만들고 이미지 crop하는 마우스 콜백 함수
 def onMouse(event, x, y, flags, param):
