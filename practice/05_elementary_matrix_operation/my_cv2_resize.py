@@ -4,6 +4,7 @@ image = cv2.imread("../../resources/images_4/read_color.jpg", cv2.IMREAD_COLOR)
 if image is None: raise Exception("파일 에러")
 
 image2 = cv2.resize(image, (image.shape[1]*2,image.shape[0]*2), interpolation= cv2.INTER_NEAREST)
+image2 = cv2.resize(image, (0,0), fx=1.0, fy=1.0, interpolation= cv2.INTER_NEAREST)
 image3 = np.zeros((image.shape[0]*2,image.shape[1]*2, 3), image.dtype)
 # image3을 작업해서 image2랑 같은 결과가 나오도록
 for h in range(0, image3.shape[0]):
