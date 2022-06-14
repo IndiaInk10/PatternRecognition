@@ -10,7 +10,7 @@ mask = np.array(data, np.uint8).reshape(3,3)
 th_img = cv2.threshold(image, 128, 255, cv2.THRESH_BINARY)[1]
 
 dst = cv2.erode(th_img, mask)
-# dst = cv2.morphologyEx(th_img, cv2.MORPH_ERODEm mask)
+# dst = cv2.morphologyEx(th_img, cv2.MORPH_ERODE, mask)
 
 cv2.imshow("image", image)
 cv2.imshow("erode", dst)

@@ -6,6 +6,7 @@ def draw_histo(hist, shape=(200, 256)):
     cv2.normalize(hist, hist, 0, shape[0], cv2.NORM_MINMAX)
     gap = hist_img.shape[1]/hist.shape[0]
 
+    # index(화소의 밝기)와 value를 동시에 얻는다
     for i, h in enumerate(hist):
         x = int(round(i*gap))
         w = int(round(gap))
@@ -20,7 +21,7 @@ def make_palette(rows):
 
     return cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
 
-def draw_hist_hue(hist, shape=(200,256, 3)):
+def draw_hist_hue(hist, shape=(200, 256, 3)):
     hsv_palette = make_palette(hist.shape[0])
     hist_img = np.full(shape, 255, np.uint8)
     hist = hist.astype('uint16')

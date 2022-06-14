@@ -39,6 +39,9 @@ mask = np.array(data, np.float32).reshape(3,3)
 
 blur1 = filter(image, mask)
 blur2 = filter2(image, mask)
+# 동일한 데이터 셋으로 출력
+blur3 = cv2.filter2D(image, -1, mask)
+cv2.imshow("blur3", blur3)
 blur1 = blur1.astype('uint8')
 blur2 = cv2.convertScaleAbs(blur2)
 

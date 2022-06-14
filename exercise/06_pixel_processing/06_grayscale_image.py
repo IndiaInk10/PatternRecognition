@@ -7,7 +7,7 @@ rows, cols = image1.shape[:2]
 
 for i in range(rows):
     for j in range(cols):
-        image1.itemset((i, j), j // 2)
+        image1.itemset((i, j), j // 2) # modulo
         image2.itemset((i, j), j // 20*10)
 
 cv2.imshow("image1", image1)
